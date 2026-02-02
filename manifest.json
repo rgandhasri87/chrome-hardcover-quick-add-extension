@@ -4,11 +4,16 @@
     "version" : "1.0",
     "description" : "Add books to Hardcover from anywhere!",
 
-    "permissions": [
-        "contextMenus"
+    "permissions" : [
+        "contextMenus",
+        "sidePanel"
     ],
 
-    "background": {
+    "background" : {
         "service_worker" : "background.js"
+    },
+
+    "side_panel" : {
+        "default_path" : "sidepanel.html"
     }
 }

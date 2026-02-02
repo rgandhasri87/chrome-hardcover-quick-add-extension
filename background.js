@@ -9,10 +9,11 @@ chrome.runtime.onInstalled.addListener(() => {
 })
 
 
-chrome.contextMenus.onClicked.addListener((info, tab) => {
+chrome.contextMenus.onClicked.addListener(async (info, tab) => {
     if (info.menuItemId === "add-to-hardcover") {
         const selectedText = info.selectionText;
         console.log("User selected:", selectedText);
-        console.log("From tab:", tab.title);
+        
+        await chrome.sidePanel.open({ windowId : tab.windowId})
     }
 });
