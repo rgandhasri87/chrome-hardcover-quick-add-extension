@@ -2,5 +2,13 @@
     "manifest_version" : 3,
     "name" : "Hardcover Quick Add",
     "version" : "1.0",
-    "description" : "Add books to Hardcover from anywhere!"
+    "description" : "Add books to Hardcover from anywhere!",
+
+    "permissions": [
+        "contextMenus"
+    ],
+
+    "background": {
+        "service_worker" : "background.js"
+    }
 }
